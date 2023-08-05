@@ -22,7 +22,7 @@ const Login = () => {
         <div className="flex flex-col h-full w-full mt-5 items-center">
           <Input placeholder="Email" className="w-full h-[40px] rounded-lg pl-5 font-thin"/>
           <Input placeholder="Password" className="w-full h-[40px] rounded-lg pl-5 font-thin"/>
-          <Button>Sign Up</Button>
+          <Button className="mt-12">Sign Up</Button>
           <div className="font-rubik mt-3 text-primary cursor-pointer font-normal">
             Forgot Password
           </div>

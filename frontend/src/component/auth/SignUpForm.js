@@ -24,7 +24,7 @@ const SignUpForm = () => {
           <Input placeholder="Name" className="w-full h-[40px] rounded-lg pl-5 font-thin"/>
           <Input placeholder="Email" className="w-full h-[40px] rounded-lg pl-5 font-thin"/>
           <Input placeholder="Password" className="w-full h-[40px] rounded-lg pl-5 font-thin"/>
-          <Button>Sign Up</Button>
+          <Button className="mt-12">Sign Up</Button>
           <div className="font-rubik mt-5 text-primary cursor-pointer">
             Have an account? Log in
           </div>
