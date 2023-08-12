@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;800&display=swap');
+
+.expanded {
+    width: 230px; /* Adjust this width as needed */
+  }
+  
