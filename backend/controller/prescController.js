@@ -7,7 +7,7 @@ const {DocDetailsModel} = require('../models/doc_details');
 const {v4:uuidv4} =require('uuid')
 
 exports.uploadPresc=async(req,res,next)=>{
-    const { doctor, date, user_id,desc } = req.body;
+    const { doctor, date, user_id,desc ,recordFor} = req.body;
   console.log(req.files);
   try {
     if(!req.files){
@@ -39,10 +39,11 @@ exports.uploadPresc=async(req,res,next)=>{
       uuid,
       doc_type:'prescription',
       no_of_doc:req.files.length,
-      desc:desc
+      desc:desc,
+      recordFor
     });
     await doc_details.save();
-    return sendResponse(res,201,{message:`doctor details and ${req.files.length} prescription uploaded successfully`})
+    return sendResponse(res,201,{message:`Doctor details and ${req.files.length} prescription for ${recordFor} uploaded successfully`})
   } catch (error) {
     next(error);
   }

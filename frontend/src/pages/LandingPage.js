@@ -1,5 +1,5 @@
 import Header from "../component/common/Header";
-import Screen from "../component/homeScreen/Screen";
+import Screen from "../component/common/Screen";
 
 const data = [
   {

@@ -22,6 +22,9 @@ const docDetailsSchema=new Schema({
     },
     desc:{
         type:String
+    },
+    recordFor:{
+        type:String
     }
 })
 

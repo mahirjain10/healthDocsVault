@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        primary:"#0EBE7F"
+        primary:"#0EBE7F",
+        'light-green':"rgba(14, 190, 127, 0.20)"
       },
       fontFamily:{
         'rubik' : ['Rubik', 'sans-serif']

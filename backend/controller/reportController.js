@@ -7,7 +7,7 @@ const {v4:uuidv4} =require('uuid');
 const { ReportModel } = require("../models/reports");
 
 exports.uploadReports = async (req, res, next) => {
-  const { doctor, date, user_id,desc } = req.body;
+  const { doctor, date, user_id,desc,recordFor } = req.body;
   console.log(req.files);
   try {
     if(!req.files){
@@ -39,7 +39,8 @@ exports.uploadReports = async (req, res, next) => {
       uuid,
       doc_type:'report',
       no_of_doc:req.files.length,
-      desc:desc
+      desc:desc,
+      recordFor
     });
     await doc_details.save();
     return sendResponse(res,201,{message:`doctor details and ${req.files.length} reports uploaded successfully`})
@@ -49,7 +50,7 @@ exports.uploadReports = async (req, res, next) => {
 };
 
 exports.updateDocDetails = async (req, res, next) => {
-  const { doctor, date,_id,desc} = req.body;
+  const { doctor, date,_id,desc,recordFor} = req.body;
   console.log(req.body)
   try {
     if (!isValidObjectId(_id)) {
@@ -63,6 +64,7 @@ exports.updateDocDetails = async (req, res, next) => {
     findDocDetails.doctor=doctor;
     findDocDetails.date=date;
     findDocDetails.desc=desc;
+    findDocDetails.recordFor = recordFor;
     await findDocDetails.save();
     return sendResponse(res,200,{message:"Document details updated successfully"})
   } catch (error) {

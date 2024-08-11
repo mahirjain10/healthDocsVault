@@ -6,4 +6,30 @@
 .expanded {
     width: 230px; /* Adjust this width as needed */
   }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Works for Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  @keyframes gridTransition {
+    from {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    to {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 20px; /* Adjust as needed */
+    animation: gridTransition 3s;
+  }
   

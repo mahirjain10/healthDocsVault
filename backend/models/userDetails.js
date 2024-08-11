@@ -10,7 +10,7 @@ const userDetailsSchema=Schema({
     },
     gender:{
         type:String,
-        enum:['male','female','transgender','non-binary']
+        enum:['male','female','transgender','non-binary','doNotWantToSpecify']
     },
     user:{
         type:ObjectId
